@@ -1,4 +1,3 @@
-
 # Exno:1
 Data Cleaning Process
 
@@ -22,260 +21,169 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
-
-
-
-DATA  CLEANING:
-
-
-<img width="1275" height="510" alt="image" src="https://github.com/user-attachments/assets/caa6ce6a-eb0f-46b3-a869-55f34f1321d2" />
-
-
-
-
-
-<img width="626" height="423" alt="image" src="https://github.com/user-attachments/assets/4939cd80-d86f-4670-93d8-fa76cedffd97" />
-
-
-
-
-
-<img width="846" height="355" alt="image" src="https://github.com/user-attachments/assets/c83a0a85-348a-40a3-8602-a07db2540425" />
-
-
-
-
-<img width="1117" height="515" alt="image" src="https://github.com/user-attachments/assets/15464d35-95c6-471c-9013-e6db78e928f3" />
-
-
-
-
-
-<img width="1096" height="495" alt="image" src="https://github.com/user-attachments/assets/865fa149-d5c4-4f7b-a021-b61eec749289" />
-
-
-
-
-
-<img width="453" height="298" alt="image" src="https://github.com/user-attachments/assets/0bac7aeb-1b97-4f74-b98d-2886e7092dcd" />
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1287" height="291" alt="image" src="https://github.com/user-attachments/assets/e80ecb26-4044-44e4-a4e5-512a80f091f2" />
-
-
-
-
-
-<img width="1321" height="331" alt="image" src="https://github.com/user-attachments/assets/20949b18-646c-43bf-a085-29c36ce534cf" />
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="291" height="79" alt="image" src="https://github.com/user-attachments/assets/215d8ed9-a310-41e9-97d6-e929eb72209e" />
-
-
-
-
-
-
-<img width="1442" height="725" alt="image" src="https://github.com/user-attachments/assets/bfa1ec91-96da-4c02-bc4e-c2ed38006f47" />
-
-
-
-
-
-
-<img width="1383" height="159" alt="image" src="https://github.com/user-attachments/assets/9947fde4-0c86-42ca-ab94-b57f53c3458f" />
-
-
-
-
-
-
-<img width="1389" height="161" alt="image" src="https://github.com/user-attachments/assets/9baccc2e-6ac9-4030-81ab-cce7048f0465" />
-
-
-
-
-
-
-<img width="567" height="168" alt="image" src="https://github.com/user-attachments/assets/f53b3cb7-fe48-4933-98ae-c18f8e3c57c2" />
-
-
-
-
-
-
-<img width="587" height="189" alt="image" src="https://github.com/user-attachments/assets/4794bb18-151e-4fcf-b3a1-067fa0ced414" />
-
-
-
-
-
-<img width="484" height="128" alt="image" src="https://github.com/user-attachments/assets/fa7245a9-eed1-48ec-8311-aa63b079c3ca" />
-
-
-
-
-
-
-
-
-
-
-
-<img width="555" height="263" alt="image" src="https://github.com/user-attachments/assets/9537d6b7-5c29-4da3-87e7-69213edd93c3" />
-
-
-
-
-
-
-<img width="1333" height="638" alt="image" src="https://github.com/user-attachments/assets/4b922574-6bff-4827-8ca0-7103ae78ff62" />
-
-
-
-
-
-<img width="701" height="486" alt="image" src="https://github.com/user-attachments/assets/25af92bc-a74c-4b97-8541-6356a4a12aab" />
-
-
-
-
-
-<img width="1362" height="467" alt="image" src="https://github.com/user-attachments/assets/a5c92490-b187-4cd4-b202-36cbf0d74beb" />
-
-
-
-
-
-
-<img width="1358" height="664" alt="image" src="https://github.com/user-attachments/assets/b1d7488f-b31b-44c1-9fb8-f724e21f502f" />
-
-
-
-
-
-
-<img width="1293" height="466" alt="image" src="https://github.com/user-attachments/assets/44f83d6e-8056-4b45-b40e-f843ef60a588" />
-
-
-
-
-
-<img width="1349" height="460" alt="image" src="https://github.com/user-attachments/assets/177d8385-8893-4c23-a1f4-05189012ccaf" />
-
-
-
-
-
-<img width="1404" height="501" alt="image" src="https://github.com/user-attachments/assets/8dc5ec40-8e17-4f52-acdc-e336b0a49cc8" />
-
-
-
-
-
-
-
-<img width="1355" height="497" alt="image" src="https://github.com/user-attachments/assets/fb8c1fa1-c7e5-4040-9deb-f558fe48e7ac" />
-
-
-
-# Outlier Detection and Removal:
+# Reading the file:
+```
+import pandas as pd
+df=pd.read_csv("SAMPLEIDS.csv")
+df
+```
+# Output
+<img width="1013" height="818" alt="Screenshot 2025-08-27 201057" src="https://github.com/user-attachments/assets/1fc755b0-9cf1-454f-8bca-179c44a4e168" />
+
+# Head Command:
+```
+df.head()
 ```
 
-import pandas as pd import seaborn as sns age=[1,3,28,27,25,92,30,39,40,50,26,24,29,94] af=pd.DataFrame(age) af
+# Output
+<img width="1012" height="255" alt="Screenshot 2025-08-27 201220" src="https://github.com/user-attachments/assets/a346b52d-c529-41e2-82db-388680ad28ac" />
 
+# Tail Command:
 ```
-<img width="832" height="761" alt="image" src="https://github.com/user-attachments/assets/75dc4ef7-8d97-453d-849d-bc9434b93a1e" />
-
-```
-sns.boxplot(data=af)
-```
-
-
-<img width="974" height="626" alt="image" src="https://github.com/user-attachments/assets/8ef2da4d-83c6-4374-bd4b-a1d13c93d8c4" />
-
-```
-import numpy as np Q1=np.percentile(age,25) Q2=np.percentile(age,50) Q3=np.percentile(age,75)
-ivr=Q3-Q1 lower_bound=Q1-1.5IQR upper_bound=Q3+1.5IQR outliers=af[(af<lower_bound) | (af>upper_bound) ]
-print("Quantile 1",Q1) print("Quantile 2",Q2) print("Quantile 3",Q3) print("Inter Quartile Range",IQR) print("Lower Bound",lower_bound) print("Upper Bound",upper_bound) print("Outliers",outliers)
+df.tail()
 ```
 
-<img width="1011" height="578" alt="image" src="https://github.com/user-attachments/assets/60066f7b-ada3-4fd5-8f95-809e5fcc1c4d" />
+# Output
+<img width="1053" height="245" alt="Screenshot 2025-08-27 201329" src="https://github.com/user-attachments/assets/06b82b27-7ee1-4a15-b267-ba7652e018c9" />
 
+# IsNull Command:
 ```
-af=af[(af>=lower_bound) & (af<=upper_bound)] af.dropna() print("After removing outliers") af
-```
-
-<img width="573" height="525" alt="image" src="https://github.com/user-attachments/assets/94e945b0-aa60-467e-b0e0-e87c4e66ca0f" />
-
-
-```
-sns.boxplot(data=af)
+df.isnull()
 ```
 
-<img width="543" height="413" alt="image" src="https://github.com/user-attachments/assets/d7663088-91ab-4ee4-a576-b9cb505c5aee" />
+# Output
+<img width="819" height="847" alt="Screenshot 2025-08-27 201509" src="https://github.com/user-attachments/assets/8b07b5c2-caaa-4fc8-a962-8cd5c013ec4a" />
 
+# Sum Command:
 ```
-from scipy import stats
-data=[1,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93,96,99,158]
- df=pd.DataFrame(data) sns.boxplot(data=df)
-
-```
-
-<img width="552" height="413" alt="image" src="https://github.com/user-attachments/assets/e540f6a4-cca0-4a76-8519-26e620acdbcd" />
-
-```
-z=np.abs(stats.zscore(data)) print("Outlier values:") outliers=df[z>3] outliers
+df.isnull().sum()
 ```
 
+# Output
+<img width="164" height="571" alt="Screenshot 2025-08-27 201718" src="https://github.com/user-attachments/assets/b5185c5a-f7c0-46c3-9d76-7fdb5532604e" />
 
-
-<img width="392" height="147" alt="image" src="https://github.com/user-attachments/assets/52755e66-5b31-4fae-88e9-07cb9a9b417f" />
-
-
-
+# Any Command:
 ```
-cleaned_df=df[z<3] print("After removing outliers") cleaned_df
-
+df.isnull().any()
 ```
 
+# Output
+<img width="194" height="571" alt="image" src="https://github.com/user-attachments/assets/45b6b57f-31d1-492c-80b1-a4037546e11e" />
 
-<img width="630" height="883" alt="image" src="https://github.com/user-attachments/assets/53a7885a-938a-4826-b9b8-0fa8a804ae09" />
-
-
+# Drop-Row Command:
+```
+df.dropna(axis=0)
 ```
 
-sns.boxplot(data=cleaned_df)
+# Output
+<img width="1054" height="559" alt="image" src="https://github.com/user-attachments/assets/b1a22af4-c3ed-41d9-a605-982e1f238304" />
+
+# Fill Command:
+```
+df.fillna(2)
 ```
 
+# Output
+<img width="1019" height="855" alt="image" src="https://github.com/user-attachments/assets/7c68897c-0d7d-4168-a5d0-62f0273b387d" />
 
-<img width="1009" height="590" alt="image" src="https://github.com/user-attachments/assets/78f69280-539c-409d-a4c0-62790d4e8c60" />
-
+# Forward Fill Command:
+```
+df.fillna(method='ffill')
 ```
 
+# Output
+<img width="1012" height="856" alt="image" src="https://github.com/user-attachments/assets/18789853-cb5b-4b8f-a547-c42d3f89bd3c" />
 
-
+# Backward Fill Command:
 ```
- Result
+df.fillna(method='bfill')
+```
 
-         Thus the data cleaning process and outlier detection and removal on the given dataset is executed successfully.
+# Output
+<img width="1011" height="855" alt="image" src="https://github.com/user-attachments/assets/a096446b-09b4-4236-93bd-0c47ca39f56b" />
+
+# Read iris.csv data:
+```
+ir=pd.read_csv("iris.csv")
+ir
+```
+
+# Output
+<img width="677" height="515" alt="image" src="https://github.com/user-attachments/assets/367d26cd-274b-490b-abd9-ae8b431654b1" />
+
+# Describe Command:
+```
+ir.describe()
+```
+
+# Output
+<img width="615" height="367" alt="image" src="https://github.com/user-attachments/assets/c087ed60-7187-4766-87a6-b4871949e92e" />
+
+# Box Plot Method:
+```
+import seaborn as sns
+sns.boxplot(x='sepal_width',data=ir)
+```
+
+# Output
+<img width="707" height="579" alt="image" src="https://github.com/user-attachments/assets/9468e6b2-b675-4cd4-9059-812f38978e9d" />
+
+# IQR Method:
+```
+q1=ir.sepal_width.quantile(0.25)
+q3=ir.sepal_width.quantile(0.75)
+iqr=q3-q1
+print(iqr)
+```
+
+# Output
+<img width="65" height="43" alt="image" src="https://github.com/user-attachments/assets/294e3793-ace0-4717-848c-70c9e1f99200" />
+
+# Finding the Lower and Upper bound:
+```
+bound=ir[((ir.sepal_width<(q1-1.5*iqr))|(ir.sepal_width>(q3+1.5*iqr)))]
+bound['sepal_width']
+```
+
+# Output
+<img width="196" height="260" alt="image" src="https://github.com/user-attachments/assets/fc4b233b-969d-4a0b-90ca-7997fc4cbbcf" />
+
+# Removing Outliers:
+```
+debound=ir[~((ir.sepal_width<(q1-1.5*iqr))|(ir.sepal_width>(q3+1.5*iqr)))]
+debound
+```
+
+# Output
+<img width="688" height="516" alt="image" src="https://github.com/user-attachments/assets/d103fcaa-3e78-4bad-837d-44fd9ef85def" />
+
+# Box Plot:
+```
+sns.boxplot(x='sepal_width',data=debound)
+```
+
+# Output
+<img width="700" height="574" alt="image" src="https://github.com/user-attachments/assets/a92a4aa7-40dc-4395-96b4-e56d50309d8a" />
+
+# Z-Score Method:
+```
+import scipy.stats as stats
+import numpy as np
+z=np.abs(stats.zscore(ir['sepal_width']))
+z
+```
+
+# Output
+<img width="715" height="667" alt="image" src="https://github.com/user-attachments/assets/f15410a5-9e74-4d7d-8e22-ddf4e4c11fe3" />
+
+# Removing Outliers
+```
+ir1=ir[z<3]
+ir1
+```
+
+# Output
+<img width="665" height="519" alt="image" src="https://github.com/user-attachments/assets/bedf21e5-26a6-468c-bf93-dd61e1fb2856" />
+
+# Result
+Thus, we have read the given data and performed data cleaning and saved the cleaned data to a file successfully.
